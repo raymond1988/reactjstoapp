@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import ToDoList from './components/ToDoList'
+import Login from './components/Login'
+import Register from './components/Register'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { GlobalProvider } from './context/GlobalProvider'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <GlobalProvider>
+      <div className='p-3'>
+        <Router>
+          <Routes>
+            <Route exact path='/' element={<Login />} />
+            <Route exact path='/register' element={<Register />} />
+            <Route exact path='/todolist' element={<ToDoList />} />
+          </Routes>
+        </Router>
+      </div>
+    </GlobalProvider>
+  )
 }
 
-export default App;
+export default App
+/* 
+<AddToDoForm />
+        <ToDoList /> */
