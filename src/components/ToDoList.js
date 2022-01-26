@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import { GlobalContext } from '../context/GlobalProvider'
 import ToDoItem from './ToDoItem'
 import AddToDoForm from './AddToDoForm'
