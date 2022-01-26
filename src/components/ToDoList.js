@@ -3,7 +3,6 @@ import { GlobalContext } from '../context/GlobalProvider'
 import ToDoItem from './ToDoItem'
 import AddToDoForm from './AddToDoForm'
 
-
 const ToDoList = () => {
   const { todos } = useContext(GlobalContext)
   //console.log(auth.currentUser.displayName);
