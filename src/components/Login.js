@@ -18,7 +18,7 @@ const Login = () => {
 
   return (
     <>
-      <div className='col-sm-12 col-md-6 col-lg-6'>
+      <div className='col-sm-12 col-md-7 col-lg-6'>
         <p className='text-center mb-3'>
           <strong>Welcome </strong>to react todo app with firebase backend.
         </p>
@@ -61,7 +61,7 @@ const Login = () => {
            <strong> Other login options </strong>
           </p>
           
-          <div className='d-flex flex-column flex-wrap py-3 py-md-5 py-lg-3'>
+          <div className='d-flex flex-column flex-wrap py-3'>
             <button className='btn btn-primary my-1 my-md-3 flex-fill' onClick={signInWithGoogle}>
               Login With Google
             </button>
