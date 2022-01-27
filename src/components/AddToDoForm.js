@@ -7,6 +7,7 @@ function AddToDoForm () {
 
   const handleOnClick = e => {
     e.preventDefault()
+    if(todo === "") return
     const newTodo = {
       id: Math.floor(Math.random() * 10000000),
       text: todo,
@@ -16,7 +17,7 @@ function AddToDoForm () {
   }
   return (
     <>
-      <form className='form-floating py-3 '>
+      <form className='form-floating'>
         <div className='input-group'>
           <input
             type='text'
