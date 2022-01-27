@@ -8,8 +8,7 @@ import { GlobalProvider } from './context/GlobalProvider'
 const App = () => {
   return (
     <GlobalProvider>
-      <div className='col'></div>
-      <div className='col-6'>
+      <div className='d-flex flex-wrap gap-5 mt-5 px-3'>
         <Router>
           <Routes>
             <Route exact path='/' element={<Login />} />
@@ -18,7 +17,6 @@ const App = () => {
           </Routes>
         </Router>
       </div>
-      <div className='col'></div>
     </GlobalProvider>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { auth, loginWithEmailAndPassword, signInWithGoogle } from '../firebase'
 
 const Login = () => {
@@ -18,11 +18,10 @@ const Login = () => {
 
   return (
     <>
-      <div className='list-group mx-0'>
-        <p>
+      <div className='col-sm-12 col-md-6 col-lg-6'>
+        <p className='text-center mb-3'>
           <strong>Welcome </strong>to react todo app with firebase backend.
         </p>
-
         <div className=''>
           <label htmlFor='inputEmail' className='form-label'>
             Email
@@ -56,13 +55,21 @@ const Login = () => {
           </button>
         </div>
       </div>
-      <div className='list-group mx-0'>
-        <p className='mb-3'>
-          Other login options <strong>(No passwords)</strong>
-        </p>
-        <button className='btn btn-primary mt-0' onClick={signInWithGoogle}>
-          Login With Google
-        </button>
+      <div className='col order-md-last'>
+        <div className='mb-3'>
+          <p className='mb-3 mb-md-2 mb-lg-3 text-center'>
+           <strong> Other login options </strong>
+          </p>
+          
+          <div className='d-flex flex-column flex-wrap py-3 py-md-5 py-lg-3'>
+            <button className='btn btn-primary my-1 my-md-3 flex-fill' onClick={signInWithGoogle}>
+              Login With Google
+            </button>
+            <button className='btn btn-primary my-1 my-md-3 flex-fill' onClick={signInWithGoogle}>
+              Login With GitHub
+            </button>
+          </div>
+        </div>
       </div>
     </>
   )
