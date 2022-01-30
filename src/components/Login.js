@@ -17,12 +17,12 @@ const Login = () => {
   }, [user, loading])
 
   return (
-    <>
-      <div className='col-sm-12 col-md-7 col-lg-6'>
-        <p className='text-center mb-3'>
+    <div className='row align-items-center g-lg-5 py-2'>
+      <div className='col-lg-7 p-md-5'>
+        <p className='fs-4 text-center mb-3'>
           <strong>Welcome </strong>to react todo app with firebase backend.
         </p>
-        <div className=''>
+        <div className='mb-3'>
           <label htmlFor='inputEmail' className='form-label'>
             Email
           </label>
@@ -54,24 +54,26 @@ const Login = () => {
             Login
           </button>
         </div>
-      </div>
-      <div className='col order-md-last'>
         <div className='mb-3'>
           <p className='mb-3 mb-md-2 mb-lg-3 text-center'>
-           <strong> Other login options </strong>
+            <strong> Other login options </strong>
           </p>
-          
-          <div className='d-flex flex-column flex-wrap py-3'>
-            <button className='btn btn-primary my-1 my-md-3 flex-fill' onClick={signInWithGoogle}>
+          <div className='d-grid gap-2 d-sm-flex justify-content-sm-center'>
+            <button className='btn btn-primary my-1' onClick={signInWithGoogle}>
               Login With Google
             </button>
-            <button className='btn btn-primary my-1 my-md-3 flex-fill' onClick={signInWithGoogle}>
+            <button className='btn btn-primary my-1' onClick={signInWithGoogle}>
               Login With GitHub
             </button>
           </div>
         </div>
       </div>
-    </>
+      <div className='col-md-10 mx-auto text-center col-lg-5'>
+        <h1 className='display-4 fw-bold'>
+          Do some amazing work today. Login.
+        </h1>
+      </div>
+    </div>
   )
 }
 

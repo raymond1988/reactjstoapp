@@ -5,7 +5,6 @@ import AddToDoForm from './AddToDoForm'
 
 const ToDoList = () => {
   const { todos } = useContext(GlobalContext)
-  //console.log(auth.currentUser.displayName);
   return (
     <>
       <div className='col'>
