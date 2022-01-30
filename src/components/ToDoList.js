@@ -6,16 +6,14 @@ import AddToDoForm from './AddToDoForm'
 const ToDoList = () => {
   const { todos } = useContext(GlobalContext)
   return (
-    <>
-      <div className='col'>
+    <div className='row align-items-center py-2 px-md-5'>
+      <div className='col px-md-5 mx-md-5'>
         <AddToDoForm />
-      </div>
-      <div className='col-sm-12 col-md-7 col-lg-6 order-md-last'>
         {todos.map(todo => (
           <ToDoItem key={todo.id} todo={todo} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
